@@ -19,6 +19,10 @@
 		782C294E18E8DB990074DEBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782C293618E8DB980074DEBD /* UIKit.framework */; };
 		782C295618E8DB990074DEBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 782C295418E8DB990074DEBD /* InfoPlist.strings */; };
 		782C295818E8DB990074DEBD /* SimplePickersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C295718E8DB990074DEBD /* SimplePickersTests.m */; };
+		782C296618E8DC0C0074DEBD /* SPDateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296318E8DC0C0074DEBD /* SPDateButton.m */; };
+		782C296718E8DC0C0074DEBD /* SPPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296518E8DC0C0074DEBD /* SPPickerButton.m */; };
+		782C296A18E8DC8E0074DEBD /* SPDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296918E8DC8E0074DEBD /* SPDemoViewController.m */; };
+		782C296C18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782C296B18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		782C295318E8DB990074DEBD /* SimplePickersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplePickersTests-Info.plist"; sourceTree = "<group>"; };
 		782C295518E8DB990074DEBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		782C295718E8DB990074DEBD /* SimplePickersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePickersTests.m; sourceTree = "<group>"; };
+		782C296218E8DC0C0074DEBD /* SPDateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDateButton.h; sourceTree = "<group>"; };
+		782C296318E8DC0C0074DEBD /* SPDateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDateButton.m; sourceTree = "<group>"; };
+		782C296418E8DC0C0074DEBD /* SPPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPickerButton.h; sourceTree = "<group>"; };
+		782C296518E8DC0C0074DEBD /* SPPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPickerButton.m; sourceTree = "<group>"; };
+		782C296818E8DC8D0074DEBD /* SPDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDemoViewController.h; sourceTree = "<group>"; };
+		782C296918E8DC8E0074DEBD /* SPDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDemoViewController.m; sourceTree = "<group>"; };
+		782C296B18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +118,12 @@
 		782C293818E8DB980074DEBD /* SimplePickers */ = {
 			isa = PBXGroup;
 			children = (
+				782C296118E8DBED0074DEBD /* Classes */,
 				782C294118E8DB980074DEBD /* SPAppDelegate.h */,
 				782C294218E8DB980074DEBD /* SPAppDelegate.m */,
+				782C296818E8DC8D0074DEBD /* SPDemoViewController.h */,
+				782C296918E8DC8E0074DEBD /* SPDemoViewController.m */,
+				782C296B18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard */,
 				782C294418E8DB980074DEBD /* Images.xcassets */,
 				782C293918E8DB980074DEBD /* Supporting Files */,
 			);
@@ -142,6 +157,17 @@
 				782C295418E8DB990074DEBD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		782C296118E8DBED0074DEBD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				782C296218E8DC0C0074DEBD /* SPDateButton.h */,
+				782C296318E8DC0C0074DEBD /* SPDateButton.m */,
+				782C296418E8DC0C0074DEBD /* SPPickerButton.h */,
+				782C296518E8DC0C0074DEBD /* SPPickerButton.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				782C293D18E8DB980074DEBD /* InfoPlist.strings in Resources */,
+				782C296C18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard in Resources */,
 				782C294518E8DB980074DEBD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +269,9 @@
 			files = (
 				782C293F18E8DB980074DEBD /* main.m in Sources */,
 				782C294318E8DB980074DEBD /* SPAppDelegate.m in Sources */,
+				782C296718E8DC0C0074DEBD /* SPPickerButton.m in Sources */,
+				782C296A18E8DC8E0074DEBD /* SPDemoViewController.m in Sources */,
+				782C296618E8DC0C0074DEBD /* SPDateButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +393,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplePickers/SimplePickers-Prefix.pch";
 				INFOPLIST_FILE = "SimplePickers/SimplePickers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -376,7 +408,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplePickers/SimplePickers-Prefix.pch";
 				INFOPLIST_FILE = "SimplePickers/SimplePickers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -440,6 +474,7 @@
 				782C295D18E8DB990074DEBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		782C295E18E8DB990074DEBD /* Build configuration list for PBXNativeTarget "SimplePickersTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +483,7 @@
 				782C296018E8DB990074DEBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
