@@ -53,6 +53,32 @@
     return _format;
 }
 
+-(UITextField *)pickerTextField
+{
+    if (!_pickerTextField)
+    {
+        _pickerTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+        [_pickerTextField setBackgroundColor:[UIColor clearColor]];
+        
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                    target:self
+                                                                                    action:@selector(doClickCancel:)];
+        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                                   target:nil
+                                                                                   action:NULL];
+        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                  target:self
+                                                                                  action:@selector(doClickDone:)];
+        UIToolbar *inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44.0)];
+        [inputAccessoryView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        [inputAccessoryView setItems:@[cancelItem, spaceItem, doneItem]];
+        
+        [_pickerTextField setInputAccessoryView:inputAccessoryView];
+        
+    }
+    return _pickerTextField;
+}
+
 #pragma mark - Setters
 
 -(void)setPickerValues:(NSArray *)pickerValues
@@ -66,13 +92,11 @@
 {
     _placeholder = placeholder;
     
-    if (!self.pickerValues)
+    if (![self currentSelectedValues])
     {
         [self updateValues:nil];
     }
 }
-
-
 
 #pragma mark - Values
 
@@ -372,27 +396,9 @@
 {
     self.placeholder = [self titleForState:UIControlStateNormal];
     
-    self.pickerTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-    [self.pickerTextField setBackgroundColor:[UIColor clearColor]];
-    [self addSubview:self.pickerTextField];
-    
     [self.pickerTextField setInputView:self.picker];
-    
-    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                                                target:self
-                                                                                action:@selector(doClickCancel:)];
-    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                                               target:nil
-                                                                               action:NULL];
-    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                              target:self
-                                                                              action:@selector(doClickDone:)];
-    UIToolbar *inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44.0)];
-    [inputAccessoryView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    [inputAccessoryView setItems:@[cancelItem, spaceItem, doneItem]];
-    
-    [self.pickerTextField setInputAccessoryView:inputAccessoryView];
-    
+    [self addSubview:self.pickerTextField];
+
     [self updateValues:nil];
 }
 

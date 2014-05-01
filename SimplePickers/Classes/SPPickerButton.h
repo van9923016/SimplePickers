@@ -15,11 +15,9 @@
 
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) NSString *format;
-
 @property (nonatomic, strong) NSArray *pickerValues;
 
 - (void)addPickerValue:(id)value forTitle:(NSString *)title forComponent:(NSInteger)component;
-
 - (NSArray *)currentSelectedValues;
 
 @end

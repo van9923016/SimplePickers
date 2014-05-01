@@ -10,6 +10,7 @@
 
 @interface SPDateButton : UIButton
 
+@property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) UIDatePicker *datePicker;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 

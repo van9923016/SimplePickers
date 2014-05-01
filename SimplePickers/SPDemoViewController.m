@@ -76,7 +76,7 @@
     NSDateFormatter *dateFormatterCustomTime = [[NSDateFormatter alloc] init];
     [dateFormatterCustomTime setDateFormat:@"HH:mm:SS"];
     [self.customTimeButton setDateFormatter:dateFormatterCustomTime];
-    
+    [self.customTimeButton setPlaceholder:@"Please pick a time"];
     
     /////////////////////
     // SPPickerButton
@@ -111,6 +111,7 @@
     [self.pickerExample2Button addPickerValue:@"#0000FF" forTitle:@"Blue" forComponent:2];
     
     // Advanced picker
+    [self.pickerExample3Button setPlaceholder:@"Please pick these values"];
     [self.pickerExample3Button setFormat:@"%@ -> %@"];
     [self.pickerExample3Button addPickerValue:[NSNumber numberWithBool:YES] forTitle:@"Yes" forComponent:0];
     [self.pickerExample3Button addPickerValue:[NSNumber numberWithBool:NO] forTitle:@"No" forComponent:0];

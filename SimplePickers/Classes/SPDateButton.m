@@ -10,8 +10,6 @@
 
 @interface SPDateButton ()
 
-@property (nonatomic, strong) NSString *placeholder;
-
 @property (nonatomic, strong) NSDate *value;
 
 @property (nonatomic, strong) UITextField *dateTextField;
@@ -41,6 +39,31 @@
     return _dateFormatter;
 }
 
+-(UITextField *)dateTextField
+{
+    if (!_dateTextField)
+    {
+        _dateTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+        [_dateTextField setBackgroundColor:[UIColor clearColor]];
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                    target:self
+                                                                                    action:@selector(doClickCancel:)];
+        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                                   target:nil
+                                                                                   action:NULL];
+        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                  target:self
+                                                                                  action:@selector(doClickDone:)];
+        UIToolbar *inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44.0)];
+        [inputAccessoryView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        [inputAccessoryView setItems:@[cancelItem, spaceItem, doneItem]];
+        
+        [_dateTextField setInputAccessoryView:inputAccessoryView];
+    }
+    
+    return _dateTextField;
+}
+
 #pragma mark - Values
 
 -(NSDate *)currentSelectedValue
@@ -63,6 +86,16 @@
     [self.datePicker setDate:date];
     
     [self updateDate:[self.datePicker date]];
+}
+
+- (void)setTitle:(NSString *)title
+{
+    [self setTitle:title forState:UIControlStateApplication];
+    [self setTitle:title forState:UIControlStateDisabled];
+    [self setTitle:title forState:UIControlStateHighlighted];
+    [self setTitle:title forState:UIControlStateNormal];
+    [self setTitle:title forState:UIControlStateReserved];
+    [self setTitle:title forState:UIControlStateSelected];
 }
 
 - (void)updateDate:(NSDate *)date
@@ -164,27 +197,9 @@
 {
     self.placeholder = [self titleForState:UIControlStateNormal];
 
-    self.dateTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-    [self.dateTextField setBackgroundColor:[UIColor clearColor]];
-    [self addSubview:self.dateTextField];
-    
     [self.dateTextField setInputView:self.datePicker];
-    
-    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                                                target:self
-                                                                                action:@selector(doClickCancel:)];
-    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                                               target:nil
-                                                                               action:NULL];
-    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                              target:self
-                                                                              action:@selector(doClickDone:)];
-    UIToolbar *inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44.0)];
-    [inputAccessoryView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    [inputAccessoryView setItems:@[cancelItem, spaceItem, doneItem]];
-    
-    [self.dateTextField setInputAccessoryView:inputAccessoryView];
-    
+    [self addSubview:self.dateTextField];
+
     [self updateDate:nil];
 }
 
