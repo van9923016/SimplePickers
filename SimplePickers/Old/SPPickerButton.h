@@ -20,4 +20,6 @@
 - (void)addPickerValue:(id)value forTitle:(NSString *)title forComponent:(NSInteger)component;
 - (NSArray *)currentSelectedValues;
 
++(id)buttonWithType:(UIButtonType)buttonType __attribute__((deprecated));
+
 @end

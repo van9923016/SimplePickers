@@ -7,19 +7,19 @@
 //
 
 #import "SPDemoViewController.h"
-#import "SPDateButton.h"
-#import "SPPickerButton.h"
+#import "SPDateTextField.h"
+#import "SPPickerTextField.h"
 
 @interface SPDemoViewController ()
 
-@property (nonatomic, strong) IBOutlet SPDateButton *dateButton;
-@property (nonatomic, strong) IBOutlet SPDateButton *shortDateButton;
-@property (nonatomic, strong) IBOutlet SPDateButton *customDateButton;
-@property (nonatomic, strong) IBOutlet SPDateButton *customTimeButton;
+@property (nonatomic, strong) IBOutlet SPDateTextField *dateButton;
+@property (nonatomic, strong) IBOutlet SPDateTextField *shortDateButton;
+@property (nonatomic, strong) IBOutlet SPDateTextField *customDateButton;
+@property (nonatomic, strong) IBOutlet SPDateTextField *customTimeButton;
 
-@property (nonatomic, strong) IBOutlet SPPickerButton *pickerExample1Button;
-@property (nonatomic, strong) IBOutlet SPPickerButton *pickerExample2Button;
-@property (nonatomic, strong) IBOutlet SPPickerButton *pickerExample3Button;
+@property (nonatomic, strong) IBOutlet SPPickerTextField *pickerExample1Button;
+@property (nonatomic, strong) IBOutlet SPPickerTextField *pickerExample2Button;
+@property (nonatomic, strong) IBOutlet SPPickerTextField *pickerExample3Button;
 
 @end
 

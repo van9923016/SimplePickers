@@ -164,6 +164,13 @@
     return [self.dateTextField becomeFirstResponder];
 }
 
+#pragma mark - UIButton
+
++ (id)buttonWithType:(UIButtonType)buttonType
+{
+    return nil;
+}
+
 #pragma mark - UIControl
 
 -(id)init

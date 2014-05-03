@@ -1,25 +1,23 @@
 //
-//  SPPickerButton.m
+//  SPPickerTextField.m
 //  SimplePickers
 //
-//  Created by Thomas Bui-Tho on 23/03/14.
+//  Created by Thomas Bui-Tho on 03/05/14.
 //  Copyright (c) 2014 Simpleous. All rights reserved.
 //
 
-#import "SPPickerButton.h"
+#import "SPPickerTextField.h"
 
-@interface SPPickerButton ()
+@interface SPPickerTextField () <UIPickerViewDataSource, UIPickerViewDelegate, UIPickerViewAccessibilityDelegate>
 
 @property (nonatomic, strong) UIPickerView *picker;
 
 @property (nonatomic, strong) NSArray *values;
 @property (nonatomic, strong) NSArray *selectedValues;
 
-@property (nonatomic, strong) UITextField *pickerTextField;
-
 @end
 
-@implementation SPPickerButton
+@implementation SPPickerTextField
 
 #pragma mark - Lazy loading
 
@@ -53,32 +51,6 @@
     return _format;
 }
 
--(UITextField *)pickerTextField
-{
-    if (!_pickerTextField)
-    {
-        _pickerTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-        [_pickerTextField setBackgroundColor:[UIColor clearColor]];
-        
-        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                                                    target:self
-                                                                                    action:@selector(doClickCancel:)];
-        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                                                   target:nil
-                                                                                   action:NULL];
-        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                  target:self
-                                                                                  action:@selector(doClickDone:)];
-        UIToolbar *inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44.0)];
-        [inputAccessoryView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-        [inputAccessoryView setItems:@[cancelItem, spaceItem, doneItem]];
-        
-        [_pickerTextField setInputAccessoryView:inputAccessoryView];
-        
-    }
-    return _pickerTextField;
-}
-
 #pragma mark - Setters
 
 -(void)setPickerValues:(NSArray *)pickerValues
@@ -86,16 +58,6 @@
     _pickerValues = pickerValues;
     
     [self.picker reloadAllComponents];
-}
-
--(void)setPlaceholder:(NSString *)placeholder
-{
-    _placeholder = placeholder;
-    
-    if (![self currentSelectedValues])
-    {
-        [self updateValues:nil];
-    }
 }
 
 #pragma mark - Values
@@ -186,7 +148,7 @@
         && row < [[self.pickerValues objectAtIndex:component] count])
     {
         NSDictionary *entry = [[self.pickerValues objectAtIndex:component] objectAtIndex:row];
-        title = [SPPickerButton titleForEntry:entry];
+        title = [SPPickerTextField titleForEntry:entry];
     }
     
     return title;
@@ -202,7 +164,7 @@
         && row < [[self.pickerValues objectAtIndex:component] count])
     {
         NSDictionary *entry = [[self.pickerValues objectAtIndex:component] objectAtIndex:row];
-        value = [SPPickerButton valueForEntry:entry];
+        value = [SPPickerTextField valueForEntry:entry];
     }
     
     return value;
@@ -228,26 +190,11 @@
     return value;
 }
 
--(BOOL)isFirstResponder
-{
-    return [self.pickerTextField isFirstResponder];
-}
-
 #pragma mark - Display
-
-- (void)setTitle:(NSString *)title
-{
-    [self setTitle:title forState:UIControlStateApplication];
-    [self setTitle:title forState:UIControlStateDisabled];
-    [self setTitle:title forState:UIControlStateHighlighted];
-    [self setTitle:title forState:UIControlStateNormal];
-    [self setTitle:title forState:UIControlStateReserved];
-    [self setTitle:title forState:UIControlStateSelected];
-}
 
 - (void)updateValues:(NSArray *)values
 {
-    NSString *title = nil;
+    NSString *text = nil;
     
     self.values = values;
     
@@ -262,15 +209,10 @@
             [titleValues addObject:titleValue];
         }
         
-        title = [self stringWithFormat:self.format andArguments:titleValues];
+        text = [self stringWithFormat:self.format andArguments:titleValues];
     }
     
-    if (!title || [@"" isEqualToString:title])
-    {
-        title = NSLocalizedString(self.placeholder, nil);
-    }
-    
-    [self setTitle:title];
+    [self setText:text];
 }
 
 #pragma mark - Actions
@@ -306,16 +248,6 @@
     {
         [self becomeFirstResponder];
     }
-}
-
--(BOOL)resignFirstResponder
-{
-    return [self.pickerTextField resignFirstResponder];
-}
-
--(BOOL)becomeFirstResponder
-{
-    return [self.pickerTextField becomeFirstResponder];
 }
 
 #pragma mark - UIPickerViewDataSource
@@ -363,6 +295,18 @@
     
 }
 
+#pragma mark - UITextField
+
+-(CGRect)caretRectForPosition:(UITextPosition *)position
+{
+    return CGRectMake(0, 0, 0, 0);
+}
+
+-(BOOL)shouldChangeTextInRange:(UITextRange *)range replacementText:(NSString *)text
+{
+    return NO;
+}
+
 #pragma mark - UIControl
 
 -(id)init
@@ -394,10 +338,22 @@
 
 - (void)commonInitialization
 {
-    self.placeholder = [self titleForState:UIControlStateNormal];
+    [self setInputView:self.picker];
+
+    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                target:self
+                                                                                action:@selector(doClickCancel:)];
+    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                               target:nil
+                                                                               action:NULL];
+    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                              target:self
+                                                                              action:@selector(doClickDone:)];
+    UIToolbar *inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44.0)];
+    [inputAccessoryView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [inputAccessoryView setItems:@[cancelItem, spaceItem, doneItem]];
     
-    [self.pickerTextField setInputView:self.picker];
-    [self addSubview:self.pickerTextField];
+    [self setInputAccessoryView:inputAccessoryView];
 
     [self updateValues:nil];
 }
