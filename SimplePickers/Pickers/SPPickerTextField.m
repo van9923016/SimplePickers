@@ -12,9 +12,6 @@
 
 @property (nonatomic, strong) UIPickerView *picker;
 
-@property (nonatomic, strong) NSArray *values;
-@property (nonatomic, strong) NSArray *selectedValues;
-
 @end
 
 @implementation SPPickerTextField
@@ -88,23 +85,6 @@
     [pickerValues replaceObjectAtIndex:component withObject:valuesForComponent];
     
     [self setPickerValues:pickerValues];
-}
-
-- (NSArray *)currentSelectedValues
-{
-    return self.selectedValues;
-}
-
-- (void)updateCurrentSelectedValues
-{
-    NSMutableArray *currentSelectedValues = [NSMutableArray array];
-    
-    for (int component = 0; component < [self.picker numberOfComponents]; component++)
-    {
-        [currentSelectedValues addObject:[self currentSelectedValueForComponent:component]];
-    }
-    
-    self.selectedValues = currentSelectedValues;
 }
 
 - (NSString *)currentSelectedTitleForComponent:(NSInteger)component
@@ -192,26 +172,24 @@
 
 #pragma mark - Display
 
-- (void)updateValues:(NSArray *)values
+-(void)setSelectedValues:(NSArray *)selectedValues
 {
+    _selectedValues = selectedValues;
+    
     NSString *text = nil;
-    
-    self.values = values;
-    
-    if (self.values)
+    if (_selectedValues)
     {
-        [self updateCurrentSelectedValues];
-        
         NSMutableArray *titleValues = [NSMutableArray array];
         for (int i = 0; i < [self.picker numberOfComponents]; i++)
         {
-            NSString *titleValue = [self titleForRow:[[self.values objectAtIndex:i] integerValue] forComponent:i];
+            [self.picker selectRow:[[_selectedValues objectAtIndex:i] integerValue] inComponent:i animated:YES];
+            
+            NSString *titleValue = [self titleForRow:[[_selectedValues objectAtIndex:i] integerValue] forComponent:i];
             [titleValues addObject:titleValue];
         }
         
         text = [self stringWithFormat:self.format andArguments:titleValues];
     }
-    
     [self setText:text];
 }
 
@@ -219,35 +197,23 @@
 
 -(IBAction)doClickCancel:(id)sender
 {
-    [self resignFirstResponder];
-    
-    if (self.values)
+    if (self.selectedValues)
     {
         for (int i = 0; i < [self.picker numberOfComponents]; i++)
         {
-            [self.picker selectRow:[[self.values objectAtIndex:i] integerValue] inComponent:i animated:NO];
+            [self.picker selectRow:[[self.selectedValues objectAtIndex:i] integerValue] inComponent:i animated:NO];
         }
-        [self updateValues:[self currentSelectedIndexes]];
+        [self setSelectedValues:[self currentSelectedIndexes]];
     }
+    
+    [self resignFirstResponder];
 }
 
 -(IBAction)doClickDone:(id)sender
 {
-    [self resignFirstResponder];
-    
-    [self updateValues:[self currentSelectedIndexes]];
-}
+    [self setSelectedValues:[self currentSelectedIndexes]];
 
--(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    if ([self isFirstResponder])
-    {
-        [self resignFirstResponder];
-    }
-    else
-    {
-        [self becomeFirstResponder];
-    }
+    [self resignFirstResponder];
 }
 
 #pragma mark - UIPickerViewDataSource
@@ -355,7 +321,7 @@
     
     [self setInputAccessoryView:inputAccessoryView];
 
-    [self updateValues:nil];
+    [self setSelectedValues:nil];
 }
 
 @end

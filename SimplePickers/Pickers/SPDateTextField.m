@@ -10,8 +10,6 @@
 
 @interface SPDateTextField ()
 
-@property (nonatomic, strong) NSDate *value;
-
 @end
 
 @implementation SPDateTextField
@@ -39,29 +37,16 @@
 
 #pragma mark - Values
 
--(NSDate *)currentSelectedValue
-{
-    return [self value];
-}
-
 -(void)setDate:(NSDate *)date
 {
-    [self.datePicker setDate:date];
+    _date = date;
     
-    [self updateDate:[self.datePicker date]];
-}
-
-- (void)updateDate:(NSDate *)date
-{
     NSString *text = nil;
-    
-    self.value = date;
-    
-    if (self.value)
+    if (_date)
     {
-        text = [self.dateFormatter stringFromDate:self.value];
+        [self.datePicker setDate:_date];
+        text = [self.dateFormatter stringFromDate:_date];
     }
-    
     [self setText:text];
 }
 
@@ -69,32 +54,20 @@
 
 -(IBAction)doClickCancel:(id)sender
 {
-    [self resignFirstResponder];
-    
-    if (self.value)
+    if (self.date)
     {
-        [self.datePicker setDate:self.value animated:NO];
-        [self updateDate:[self.datePicker date]];
+        [self.datePicker setDate:self.date animated:NO];
+        [self setDate:[self.datePicker date]];
     }
+
+    [self resignFirstResponder];
 }
 
 -(IBAction)doClickDone:(id)sender
 {
-    [self resignFirstResponder];
-    
-    [self updateDate:[self.datePicker date]];
-}
+    [self setDate:[self.datePicker date]];
 
--(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    if ([self isFirstResponder])
-    {
-        [self resignFirstResponder];
-    }
-    else
-    {
-        [self becomeFirstResponder];
-    }
+    [self resignFirstResponder];
 }
 
 #pragma mark - UITextField
@@ -157,7 +130,7 @@
     
     [self setInputAccessoryView:inputAccessoryView];
     
-    [self updateDate:nil];
+    [self setDate:nil];
 }
 
 @end

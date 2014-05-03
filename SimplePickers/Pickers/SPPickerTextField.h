@@ -16,7 +16,8 @@
 @property (nonatomic, strong) NSString *format;
 @property (nonatomic, strong) NSArray *pickerValues;
 
+@property (nonatomic, strong) NSArray *selectedValues;
+
 - (void)addPickerValue:(id)value forTitle:(NSString *)title forComponent:(NSInteger)component;
-- (NSArray *)currentSelectedValues;
 
 @end

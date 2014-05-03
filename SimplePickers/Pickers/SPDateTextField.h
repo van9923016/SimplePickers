@@ -13,6 +13,6 @@
 @property (nonatomic, strong) UIDatePicker *datePicker;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
-- (NSDate *)currentSelectedValue;
+@property (nonatomic, strong) NSDate *date;
 
 @end

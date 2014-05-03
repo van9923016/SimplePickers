@@ -29,16 +29,16 @@
 {
     NSString *message = @"";
     
-    message = [message stringByAppendingFormat:@"datebutton [%@]\n", [self.dateButton currentSelectedValue]];
-    message = [message stringByAppendingFormat:@"shortDateButton [%@]\n", [self.shortDateButton currentSelectedValue]];
-    message = [message stringByAppendingFormat:@"customDateButton [%@]\n", [self.customDateButton currentSelectedValue]];
-    message = [message stringByAppendingFormat:@"customTimeButton [%@]\n", [self.customTimeButton currentSelectedValue]];
+    message = [message stringByAppendingFormat:@"datebutton [%@]\n", [self.dateButton date]];
+    message = [message stringByAppendingFormat:@"shortDateButton [%@]\n", [self.shortDateButton date]];
+    message = [message stringByAppendingFormat:@"customDateButton [%@]\n", [self.customDateButton date]];
+    message = [message stringByAppendingFormat:@"customTimeButton [%@]\n", [self.customTimeButton date]];
 
     message = [message stringByAppendingString:@"\n"];
     
-    message = [message stringByAppendingFormat:@"pickerExample1Button [%@]\n", [self.pickerExample1Button currentSelectedValues]];
-    message = [message stringByAppendingFormat:@"pickerExample2Button [%@]\n", [self.pickerExample2Button currentSelectedValues]];
-    message = [message stringByAppendingFormat:@"pickerExample3Button [%@]\n", [self.pickerExample3Button currentSelectedValues]];
+    message = [message stringByAppendingFormat:@"pickerExample1Button [%@]\n", [self.pickerExample1Button selectedValues]];
+    message = [message stringByAppendingFormat:@"pickerExample2Button [%@]\n", [self.pickerExample2Button selectedValues]];
+    message = [message stringByAppendingFormat:@"pickerExample3Button [%@]\n", [self.pickerExample3Button selectedValues]];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Results" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
