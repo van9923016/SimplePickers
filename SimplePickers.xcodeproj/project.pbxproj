@@ -21,8 +21,14 @@
 		782C295818E8DB990074DEBD /* SimplePickersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C295718E8DB990074DEBD /* SimplePickersTests.m */; };
 		782C296618E8DC0C0074DEBD /* SPDateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296318E8DC0C0074DEBD /* SPDateButton.m */; };
 		782C296718E8DC0C0074DEBD /* SPPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296518E8DC0C0074DEBD /* SPPickerButton.m */; };
-		782C296A18E8DC8E0074DEBD /* SPDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296918E8DC8E0074DEBD /* SPDemoViewController.m */; };
+		782C296A18E8DC8E0074DEBD /* SPDemoDatePickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C296918E8DC8E0074DEBD /* SPDemoDatePickersViewController.m */; };
 		782C296C18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782C296B18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard */; };
+		78314A791929108100C971F0 /* SPColorSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78314A781929108100C971F0 /* SPColorSliderView.m */; };
+		78314A7C1931276900C971F0 /* SPSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78314A7B1931276900C971F0 /* SPSliderView.m */; };
+		78C1184D1916BAB900F65A0C /* SPDemoCustomPickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C1184B1916BAB900F65A0C /* SPDemoCustomPickersViewController.m */; };
+		78C118501916BAD900F65A0C /* SPDemoColorPickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C1184F1916BAD900F65A0C /* SPDemoColorPickersViewController.m */; };
+		78C118531916BBDB00F65A0C /* SPColorTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C118521916BBDB00F65A0C /* SPColorTextField.m */; };
+		78C118561918468F00F65A0C /* SPColorGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C118551918468F00F65A0C /* SPColorGradientView.m */; };
 		78C6A0A11914C9AE00E3CDF7 /* SPDateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C6A0A01914C9AE00E3CDF7 /* SPDateTextField.m */; };
 		78C6A0A41914C9B800E3CDF7 /* SPPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C6A0A31914C9B800E3CDF7 /* SPPickerTextField.m */; };
 /* End PBXBuildFile section */
@@ -58,9 +64,21 @@
 		782C296318E8DC0C0074DEBD /* SPDateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDateButton.m; sourceTree = "<group>"; };
 		782C296418E8DC0C0074DEBD /* SPPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPickerButton.h; sourceTree = "<group>"; };
 		782C296518E8DC0C0074DEBD /* SPPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPickerButton.m; sourceTree = "<group>"; };
-		782C296818E8DC8D0074DEBD /* SPDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDemoViewController.h; sourceTree = "<group>"; };
-		782C296918E8DC8E0074DEBD /* SPDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDemoViewController.m; sourceTree = "<group>"; };
+		782C296818E8DC8D0074DEBD /* SPDemoDatePickersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDemoDatePickersViewController.h; sourceTree = "<group>"; };
+		782C296918E8DC8E0074DEBD /* SPDemoDatePickersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDemoDatePickersViewController.m; sourceTree = "<group>"; };
 		782C296B18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
+		78314A771929108100C971F0 /* SPColorSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPColorSliderView.h; sourceTree = "<group>"; };
+		78314A781929108100C971F0 /* SPColorSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPColorSliderView.m; sourceTree = "<group>"; };
+		78314A7A1931276900C971F0 /* SPSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSliderView.h; sourceTree = "<group>"; };
+		78314A7B1931276900C971F0 /* SPSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSliderView.m; sourceTree = "<group>"; };
+		78C1184B1916BAB900F65A0C /* SPDemoCustomPickersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDemoCustomPickersViewController.m; sourceTree = "<group>"; };
+		78C1184C1916BAB900F65A0C /* SPDemoCustomPickersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDemoCustomPickersViewController.h; sourceTree = "<group>"; };
+		78C1184E1916BAD900F65A0C /* SPDemoColorPickersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDemoColorPickersViewController.h; sourceTree = "<group>"; };
+		78C1184F1916BAD900F65A0C /* SPDemoColorPickersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDemoColorPickersViewController.m; sourceTree = "<group>"; };
+		78C118511916BBDB00F65A0C /* SPColorTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPColorTextField.h; sourceTree = "<group>"; };
+		78C118521916BBDB00F65A0C /* SPColorTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPColorTextField.m; sourceTree = "<group>"; };
+		78C118541918468F00F65A0C /* SPColorGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPColorGradientView.h; sourceTree = "<group>"; };
+		78C118551918468F00F65A0C /* SPColorGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPColorGradientView.m; sourceTree = "<group>"; };
 		78C6A09F1914C9AE00E3CDF7 /* SPDateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDateTextField.h; sourceTree = "<group>"; };
 		78C6A0A01914C9AE00E3CDF7 /* SPDateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDateTextField.m; sourceTree = "<group>"; };
 		78C6A0A21914C9B800E3CDF7 /* SPPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPickerTextField.h; sourceTree = "<group>"; };
@@ -128,8 +146,12 @@
 				782C296118E8DBED0074DEBD /* Pickers */,
 				782C294118E8DB980074DEBD /* SPAppDelegate.h */,
 				782C294218E8DB980074DEBD /* SPAppDelegate.m */,
-				782C296818E8DC8D0074DEBD /* SPDemoViewController.h */,
-				782C296918E8DC8E0074DEBD /* SPDemoViewController.m */,
+				782C296818E8DC8D0074DEBD /* SPDemoDatePickersViewController.h */,
+				782C296918E8DC8E0074DEBD /* SPDemoDatePickersViewController.m */,
+				78C1184C1916BAB900F65A0C /* SPDemoCustomPickersViewController.h */,
+				78C1184B1916BAB900F65A0C /* SPDemoCustomPickersViewController.m */,
+				78C1184E1916BAD900F65A0C /* SPDemoColorPickersViewController.h */,
+				78C1184F1916BAD900F65A0C /* SPDemoColorPickersViewController.m */,
 				782C296B18E8DC9D0074DEBD /* Storyboard_iPhone.storyboard */,
 				782C294418E8DB980074DEBD /* Images.xcassets */,
 				782C293918E8DB980074DEBD /* Supporting Files */,
@@ -173,6 +195,14 @@
 				78C6A0A01914C9AE00E3CDF7 /* SPDateTextField.m */,
 				78C6A0A21914C9B800E3CDF7 /* SPPickerTextField.h */,
 				78C6A0A31914C9B800E3CDF7 /* SPPickerTextField.m */,
+				78C118511916BBDB00F65A0C /* SPColorTextField.h */,
+				78C118521916BBDB00F65A0C /* SPColorTextField.m */,
+				78314A771929108100C971F0 /* SPColorSliderView.h */,
+				78314A781929108100C971F0 /* SPColorSliderView.m */,
+				78C118541918468F00F65A0C /* SPColorGradientView.h */,
+				78C118551918468F00F65A0C /* SPColorGradientView.m */,
+				78314A7A1931276900C971F0 /* SPSliderView.h */,
+				78314A7B1931276900C971F0 /* SPSliderView.m */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -285,12 +315,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C1184D1916BAB900F65A0C /* SPDemoCustomPickersViewController.m in Sources */,
 				78C6A0A11914C9AE00E3CDF7 /* SPDateTextField.m in Sources */,
+				78C118501916BAD900F65A0C /* SPDemoColorPickersViewController.m in Sources */,
 				782C293F18E8DB980074DEBD /* main.m in Sources */,
 				78C6A0A41914C9B800E3CDF7 /* SPPickerTextField.m in Sources */,
 				782C294318E8DB980074DEBD /* SPAppDelegate.m in Sources */,
 				782C296718E8DC0C0074DEBD /* SPPickerButton.m in Sources */,
-				782C296A18E8DC8E0074DEBD /* SPDemoViewController.m in Sources */,
+				78314A7C1931276900C971F0 /* SPSliderView.m in Sources */,
+				78C118561918468F00F65A0C /* SPColorGradientView.m in Sources */,
+				782C296A18E8DC8E0074DEBD /* SPDemoDatePickersViewController.m in Sources */,
+				78C118531916BBDB00F65A0C /* SPColorTextField.m in Sources */,
+				78314A791929108100C971F0 /* SPColorSliderView.m in Sources */,
 				782C296618E8DC0C0074DEBD /* SPDateButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

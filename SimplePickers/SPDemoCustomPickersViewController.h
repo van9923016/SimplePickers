@@ -1,5 +1,5 @@
 //
-//  SPDemoViewController.h
+//  SPDemoCustomPickersViewController.h
 //  SimplePickers
 //
 //  Created by Thomas Bui-Tho on 31/03/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPDemoViewController : UITableViewController
+@interface SPDemoCustomPickersViewController : UITableViewController
 
 @end

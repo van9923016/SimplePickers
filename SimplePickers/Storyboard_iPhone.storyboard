@@ -13,17 +13,102 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="jRY-tc-w4m" kind="relationship" relationship="rootViewController" id="fbb-Pc-n3h"/>
+                        <segue destination="EEX-8m-yQG" kind="relationship" relationship="rootViewController" id="bAm-EQ-txW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBY-RK-nqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="11"/>
+            <point key="canvasLocation" x="-348" y="11"/>
         </scene>
-        <!--Demo View Controller-->
+        <!--Table View Controller - Pickers-->
+        <scene sceneID="cWB-aX-PbN">
+            <objects>
+                <tableViewController id="EEX-8m-yQG" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="R65-cw-iPU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="64H-Mz-THf">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="v8C-nK-jDT" style="IBUITableViewCellStyleDefault" id="obe-xc-5je">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="obe-xc-5je" id="JCJ-Zd-6ja">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Date pickers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v8C-nK-jDT">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jRY-tc-w4m" kind="push" id="8rw-sO-tuL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ykr-yj-kcq" style="IBUITableViewCellStyleDefault" id="lm2-UA-mtE">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lm2-UA-mtE" id="Vb1-w7-6x0">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Custom pickers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ykr-yj-kcq">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2Oh-VL-Y6L" kind="push" id="nZD-bQ-TgT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vZB-08-9R4" style="IBUITableViewCellStyleDefault" id="bac-Lg-WzK">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bac-Lg-WzK" id="8Ch-DR-Qfm">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Color pickers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vZB-08-9R4">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pOw-8d-68n" kind="push" id="CwN-OQ-yp9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="EEX-8m-yQG" id="zXF-n8-zoA"/>
+                            <outlet property="delegate" destination="EEX-8m-yQG" id="j2G-SW-pIR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pickers" id="92e-ra-Ljc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zx-Uf-YRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="13"/>
+        </scene>
+        <!--Demo Date Pickers View Controller - Date pickers-->
         <scene sceneID="l4N-NP-FLU">
             <objects>
-                <tableViewController id="jRY-tc-w4m" customClass="SPDemoViewController" sceneMemberID="viewController">
+                <tableViewController id="jRY-tc-w4m" customClass="SPDemoDatePickersViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="O84-lA-Uc9">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,48 +182,49 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Custom pickers" id="jVF-Hm-LQZ">
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="jRY-tc-w4m" id="uAJ-6a-o73"/>
+                            <outlet property="delegate" destination="jRY-tc-w4m" id="Pqi-uv-c8k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Date pickers" id="cOp-6e-Hac">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="OgE-lG-Hlg">
+                            <connections>
+                                <action selector="doApply:" destination="jRY-tc-w4m" id="cGT-CO-Hxg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="customDateTextField" destination="OJL-y4-0ET" id="rgp-6H-Yve"/>
+                        <outlet property="customTimeTextField" destination="sUC-XM-wEt" id="q2l-rg-nLd"/>
+                        <outlet property="dateTextField" destination="wb0-Hp-Ncz" id="SWf-Ih-uEe"/>
+                        <outlet property="shortDateTextField" destination="hfe-mL-FIS" id="dtF-GE-M7x"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DY-MB-PRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="-714"/>
+        </scene>
+        <!--Demo Color Pickers View Controller - Color pickers-->
+        <scene sceneID="idn-88-kaV">
+            <objects>
+                <tableViewController id="pOw-8d-68n" customClass="SPDemoColorPickersViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ndr-4w-0bM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Color pickers" id="lNa-28-Mji">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ief-iZ-xoW">
-                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pnx-nH-a2G">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ief-iZ-xoW" id="zCF-Xo-hPA">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pnx-nH-a2G" id="bXs-xr-pUu">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom picker - Example 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-Lf-YDR" customClass="SPPickerTextField">
-                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KG4-tz-vlD">
-                                        <rect key="frame" x="0.0" y="264" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KG4-tz-vlD" id="Dyr-oY-Py8">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom picker - Example 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seP-mP-jQb" customClass="SPPickerTextField">
-                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yVQ-cm-Ify">
-                                        <rect key="frame" x="0.0" y="308" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVQ-cm-Ify" id="CKE-72-X91">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom picker - Example 3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qul-nF-Xbb" customClass="SPPickerTextField">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Color picker" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2T-dD-Fal" customClass="SPColorTextField">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -151,30 +237,108 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="jRY-tc-w4m" id="uAJ-6a-o73"/>
-                            <outlet property="delegate" destination="jRY-tc-w4m" id="Pqi-uv-c8k"/>
+                            <outlet property="dataSource" destination="pOw-8d-68n" id="ccU-cQ-Md3"/>
+                            <outlet property="delegate" destination="pOw-8d-68n" id="ZiB-9V-x5u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cOp-6e-Hac">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="OgE-lG-Hlg">
+                    <navigationItem key="navigationItem" title="Color pickers" id="VDF-Rz-TMY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ROM-wF-h5s">
                             <connections>
-                                <action selector="doApply:" destination="jRY-tc-w4m" id="cGT-CO-Hxg"/>
+                                <action selector="doApply:" destination="pOw-8d-68n" id="qKI-UF-zWH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="customDateButton" destination="OJL-y4-0ET" id="P3U-N1-TGi"/>
-                        <outlet property="customTimeButton" destination="sUC-XM-wEt" id="1JN-Bk-oGm"/>
-                        <outlet property="dateButton" destination="wb0-Hp-Ncz" id="PNk-2u-aer"/>
-                        <outlet property="pickerExample1Button" destination="5hG-Lf-YDR" id="Tws-yB-itl"/>
-                        <outlet property="pickerExample2Button" destination="seP-mP-jQb" id="vev-ae-aKM"/>
-                        <outlet property="pickerExample3Button" destination="Qul-nF-Xbb" id="upM-Uc-XYe"/>
-                        <outlet property="shortDateButton" destination="hfe-mL-FIS" id="Mi7-9P-TXt"/>
+                        <outlet property="colorTextField" destination="d2T-dD-Fal" id="EPQ-fS-G5g"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3DY-MB-PRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Glg-VT-0W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="11"/>
+            <point key="canvasLocation" x="610" y="714"/>
+        </scene>
+        <!--Demo Custom Pickers View Controller - Custom pickers-->
+        <scene sceneID="MNW-uh-fZb">
+            <objects>
+                <tableViewController id="2Oh-VL-Y6L" customClass="SPDemoCustomPickersViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eHI-PF-mtl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Custom pickers" id="IX8-w9-Iy7">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Uap-ZG-k44">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uap-ZG-k44" id="QIr-pk-3nJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom picker - Example 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yan-jc-7S5" customClass="SPPickerTextField">
+                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vDU-12-hqA">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vDU-12-hqA" id="lxn-1t-mm1">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom picker - Example 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4g-HQ-3XZ" customClass="SPPickerTextField">
+                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bxa-nS-LJR">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxa-nS-LJR" id="208-VE-bCD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom picker - Example 3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NY2-nz-hMI" customClass="SPPickerTextField">
+                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="2Oh-VL-Y6L" id="95C-lL-BM3"/>
+                            <outlet property="delegate" destination="2Oh-VL-Y6L" id="5oF-hc-l7C"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Custom pickers" id="c3d-7q-KFb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xs8-xD-bx4">
+                            <connections>
+                                <action selector="doApply:" destination="2Oh-VL-Y6L" id="UdZ-UK-TM8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pickerExample1TextField" destination="yan-jc-7S5" id="drA-OM-Xrx"/>
+                        <outlet property="pickerExample2TextField" destination="G4g-HQ-3XZ" id="inN-XA-DEo"/>
+                        <outlet property="pickerExample3TextField" destination="NY2-nz-hMI" id="6sL-uN-726"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COP-xZ-3SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="11"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
